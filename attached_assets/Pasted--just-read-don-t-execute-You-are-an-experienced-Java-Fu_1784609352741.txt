@@ -1,0 +1,169 @@
+""just read don't execute""
+
+You are an experienced Java Full Stack mentor and software engineer.
+I am a Computer Science student learning Java Full Stack development.
+Help me build my internship project step by step.
+Project Title:
+Campus Complaint Escalation System
+Tech Stack:
+- Java 21
+- Spring Boot
+- Spring Security
+- JWT Authentication
+- MySQL
+- Hibernate (JPA)
+- Maven
+- React (Vite)
+- React Router
+- Axios
+- Tailwind CSS
+IMPORTANT:
+Do NOT assume I know everything.
+Teach me from beginner to intermediate level.
+Whenever you create anything, explain:
+1. What are we building?
+2. Why do we need it?
+3. How does it work?
+4. Why are we writing this code?
+5. How does it connect with the rest of the project?
+Explain every new concept before writing code.
+For example:
+- What is Spring Boot?
+- What is JPA?
+- What is an Entity?
+- What is Repository?
+- What is Service?
+- What is Controller?
+- What is DTO?
+- What is JWT?
+- What is Spring Security?
+- What is React Router?
+- What is Axios?
+Do not skip explanations.
+Assume I am learning while building the project.
+---------------------------------------
+Project Description
+The Campus Complaint Escalation System allows students to register complaints related to campus issues.
+Examples:
+- Electrical
+- Plumbing
+- Internet
+- Hostel
+- Cleaning
+- Library
+- Laboratory
+- Security
+Workflow:
+Student logs in
+↓
+Creates Complaint
+↓
+Complaint automatically reaches the respective Department Head
+↓
+Department Head assigns it to a staff member
+↓
+Staff accepts the complaint
+↓
+Staff updates progress
+↓
+Staff resolves complaint
+↓
+Student verifies
+↓
+Complaint closes
+If the complaint is not updated within the configured number of days:
+↓
+System automatically changes status to ESCALATED
+↓
+Admin and Department Head are notified
+↓
+Department Head may reassign another staff member
+---------------------------------------
+Roles
+Student
+- Register
+- Login
+- Raise Complaint
+- View Status
+- Complaint History
+- Feedback
+Staff
+- Login
+- View Assigned Complaints
+- Accept Complaint
+- Update Status
+- Resolve Complaint
+Department Head
+- View Department Complaints
+- Assign Staff
+- Monitor Progress
+- Reassign Complaints
+Admin
+- Manage Users
+- Manage Departments
+- Dashboard
+- Reports
+- Analytics
+---------------------------------------
+Complaint Status
+NEW
+ASSIGNED
+IN_PROGRESS
+ON_HOLD
+ESCALATED
+RESOLVED
+CLOSED
+REJECTED
+---------------------------------------
+Backend
+Use Spring Boot best practices.
+Layered Architecture:
+Controller
+↓
+Service
+↓
+Repository
+↓
+Database
+Use DTOs.
+Use Global Exception Handling.
+Use Validation.
+Use ResponseEntity.
+Use Constructor Injection.
+Explain every annotation.
+---------------------------------------
+Frontend
+Use React with Vite.
+Create reusable components.
+Use protected routes.
+Use Axios.
+Explain every React concept before using it.
+---------------------------------------
+Development Rules
+Do NOT generate the entire project in one response.
+Build only one module at a time.
+For every module:
+Step 1:
+Explain the concept.
+Step 2:
+Explain the folder structure.
+Step 3:
+Generate code.
+Step 4:
+Explain every line of code.
+Step 5:
+Explain how to test it.
+Step 6:
+Wait for my confirmation before moving to the next module.
+---------------------------------------
+My Goal
+I want to understand the project completely.
+I want to be able to explain every part during my internship interview.
+Do not rush.
+Teach me like a mentor.
+Start with Requirement Analysis and Project Planning only.
+Do not write any code until the project design is finalized.
+
+
+
+""""in the next promot i will give the promot to execute here what ever given just read and get the idea what my requirement "

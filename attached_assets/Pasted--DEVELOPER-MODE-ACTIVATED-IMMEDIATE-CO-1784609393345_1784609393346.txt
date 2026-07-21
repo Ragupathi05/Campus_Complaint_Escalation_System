@@ -1,0 +1,83 @@
+===========================================================
+DEVELOPER MODE ACTIVATED — IMMEDIATE CODE IMPLEMENTATION
+===========================================================
+
+You are acting as the Lead Software Engineer implementing the "Campus Complaint Escalation & Facility Management System".
+
+CRITICAL EXECUTION & CREDIT-SAVING RULES:
+1. CODE FIRST: Focus 98% of your response on source code. Keep explanations under 2 lines per file.
+2. NO PLACEHOLDERS: Strictly NO `// TODO`, NO missing methods, NO pseudo-code, and NO skipped imports. Every file must be 100% complete and copy-paste ready.
+3. RELATIVE FILE PATHS: Always place the exact relative file path above every code block (e.g., `src/main/java/com/campuscomplaint/entity/Complaint.java`).
+4. DO NOT ASK FOR PERMISSION: Do not ask "Should I proceed?", "Would you like me to continue?", or ask me to choose options. 
+5. CONTINUOUS GENERATION: Generate files back-to-back in sequence until you reach your output limit.
+6. OUTPUT LIMIT RULE: When you hit the max response limit, end with EXACTLY this line:
+   "Continue with the next project files."
+   (In the next prompt, resume seamlessly from the next file without repeating code).
+
+===========================================================
+1. PROJECT SPECIFICATION & ARCHITECTURE
+===========================================================
+• Application: Campus Complaint Escalation & Facility Management System
+• Backend: Java 21, Spring Boot 3.x, Spring Security (Stateless JWT), Spring Data JPA, Lombok, MapStruct, Jakarta Validation, Maven.
+• Frontend: React.js (Vite), React Router DOM v6, Axios, Bootstrap 5 / Tailwind CSS, Chart.js / Recharts.
+• Database: MySQL 8.x
+• Base Package: com.campuscomplaint
+
+===========================================================
+2. ROLES, WORKFLOW & LOCATION HIERARCHY
+===========================================================
+• Organizational Hierarchy: Student / Faculty -> Department Head -> Staff -> Admin -> Higher Officials
+• Student/Faculty: Raise complaints, select structured campus location, upload photo, track visual timeline, rate resolution (1-5 stars), reopen within 3 days.
+• Department Head: Manages departmental complaints (Electrical, IT, Cleaning, Maintenance), assigns staff, approves/rejects work proofs.
+• Staff: View personal task queue, update progress status, upload mandatory "Before/After" photos, mark resolved.
+• Admin: Manages Users, Departments, Locations, Categories, SLA rules. NOTE: Admin NEVER assigns daily complaints to staff.
+• Higher Officials (Principal/Dean): Read-only executive view of severe, SLA-escalated tickets.
+
+• Structured Campus Location Hierarchy (No raw text):
+  Campus -> Academic Block/Zone -> Floor -> Room -> Specific Landmark
+  (Example: Main Campus -> Block A -> 2nd Floor -> Room A-204 -> Near Window)
+
+• Categories & Auto-Priorities:
+  - Electrical (Critical/Emergency) | Water Leakage / Plumbing (High)
+  - Internet / Wi-Fi (High)        | Smart Classroom / Projector (Medium)
+  - Furniture / Benches (Low)      | Sanitation / Cleaning (High)
+  - Laboratory / Library / Hostel  | Security / Others
+
+• Status Lifecycle:
+  NEW -> ASSIGNED -> ACCEPTED -> IN_PROGRESS -> WAITING_PARTS -> RESOLVED -> VERIFIED -> CLOSED -> ESCALATED -> REOPENED -> REJECTED
+
+• SLA Escalation Engine:
+  Spring Boot @Scheduled cron task runs periodically, checks SLA timeouts, and auto-escalates unresolved tickets to Admin and Higher Officials with an immutable audit log.
+
+===========================================================
+3. IMPLEMENTATION SPRINT ORDER
+===========================================================
+Sprint 1: Core Backend Infrastructure, Configs & Security (Current)
+Sprint 2: Entities & Repositories (User, Role, Department, Location, Complaint, AuditLog)
+Sprint 3: Auth & User Management APIs (JWT Login, Register, Profile)
+Sprint 4: Department & Location Management APIs
+Sprint 5: Core Complaint Lifecycle & Photo Upload Handlers
+Sprint 6: Automated SLA Escalation Cron Scheduler & Audit Trail
+Sprint 7: React Frontend Setup, Axios Interceptors, Router Guards, & Role Dashboards
+
+===========================================================
+START IMPLEMENTATION NOW — SPRINT 1: CORE BACKEND & SECURITY
+===========================================================
+
+Begin generating complete, production-ready files in sequence immediately:
+
+1. `pom.xml` (Spring Boot 3.x, Security, JWT jjwt-api/impl/jackson, JPA, MySQL Driver, Lombok, MapStruct, Validation)
+2. `src/main/resources/application.yml` (MySQL connection, Hibernate DDL props, JWT secret/expiration, multipart file limits)
+3. Domain Enums:
+   - `src/main/java/com/campuscomplaint/enums/RoleType.java`
+   - `src/main/java/com/campuscomplaint/enums/ComplaintStatus.java`
+   - `src/main/java/com/campuscomplaint/enums/PriorityLevel.java`
+4. Base Wrappers & Infrastructure:
+   - `src/main/java/com/campuscomplaint/entity/BaseEntity.java` (MappedSuperclass with @CreatedDate, @LastModifiedDate, soft delete)
+   - `src/main/java/com/campuscomplaint/dto/response/ApiResponse.java` (Generic standard wrapper)
+5. Security & JWT:
+   - `src/main/java/com/campuscomplaint/security/jwt/JwtUtils.java`
+   - `src/main/java/com/campuscomplaint/security/jwt/AuthTokenFilter.java`
+   - `src/main/java/com/campuscomplaint/config/SecurityConfig.java` (SecurityFilterChain, BCrypt, CORS, RBAC rules)
+
+Begin writing `pom.xml` right now. Do not output an introduction or summary.

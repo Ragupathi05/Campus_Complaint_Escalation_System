@@ -1,0 +1,519 @@
+You are a Senior Java Full Stack Software Engineer with 15+ years of experience.
+
+Help me build a complete industry-level Java Full Stack application step by step.
+
+Project Title:
+Campus Complaint Escalation System
+
+Tech Stack:
+- Java 21
+- Spring Boot 3.x
+- Spring Security
+- JWT Authentication
+- Spring Data JPA (Hibernate)
+- MySQL
+- Maven
+- React.js (Vite)
+- React Router
+- Axios
+- Tailwind CSS
+- REST APIs
+
+Project Goal:
+Develop a web application that allows students to raise campus complaints. Complaints should automatically go to the respective department, where the Department Head assigns them to a staff member. If complaints are not resolved within a configurable time, they should automatically escalate.
+
+Important:
+I DO NOT want only code.
+
+I want to understand every concept.
+
+Whenever you generate code:
+1. Explain what we are building.
+2. Explain why we need it.
+3. Explain how it works.
+4. Explain every annotation.
+5. Explain every method.
+6. Explain every folder.
+7. Explain every class responsibility.
+8. Explain how it connects with the rest of the project.
+
+Teach me like a mentor, not like a code generator.
+
+----------------------------------------------------
+
+Project Roles
+
+1. Student
+- Register
+- Login
+- Create Complaint
+- Upload Image (Optional)
+- Track Complaint Status
+- View Complaint History
+- Give Feedback
+- Edit profile
+
+2. Staff
+- Login
+- View complaints assigned by Department Head
+- Accept complaint
+- Update complaint progress
+- Resolve complaint
+- Add resolution remarks
+
+3. Department Head
+- Login
+- View all complaints in their department
+- Assign complaints to staff
+- Reassign complaints
+- View staff workload
+- Monitor complaint progress
+
+4. Admin
+- Manage Departments
+- Manage Users
+- Manage Department Heads
+- Dashboard
+- Reports
+- Analytics
+- View all complaints
+- Configure escalation time
+- Manage complaint categories
+
+----------------------------------------------------
+
+Workflow
+
+Student submits complaint
+
+↓
+
+Complaint is stored
+
+↓
+
+Complaint automatically reaches corresponding Department Head
+
+↓
+
+Department Head assigns complaint to one staff member
+
+↓
+
+Staff accepts complaint
+
+↓
+
+Status changes to IN_PROGRESS
+
+↓
+
+Staff resolves complaint
+
+↓
+
+Student verifies
+
+↓
+
+Complaint Closed
+
+If complaint is not updated within configured time
+
+↓
+
+Automatically change status to ESCALATED
+
+↓
+
+Notify Department Head and Admin
+
+↓
+
+Department Head reassigns another staff if required
+
+----------------------------------------------------
+
+Complaint Status
+
+NEW
+
+ASSIGNED
+
+IN_PROGRESS
+
+ON_HOLD
+
+ESCALATED
+
+RESOLVED
+
+CLOSED
+
+REJECTED
+
+----------------------------------------------------
+
+Complaint Priority
+
+LOW
+
+MEDIUM
+
+HIGH
+
+URGENT
+
+----------------------------------------------------
+
+Complaint Categories
+
+Electrical
+
+Plumbing
+
+Cleaning
+
+Hostel
+
+Transport
+
+Library
+
+Laboratory
+
+Internet
+
+Classroom
+
+Security
+
+Others
+
+----------------------------------------------------
+
+Backend Architecture
+
+Follow clean layered architecture.
+
+controller
+
+↓
+
+service
+
+↓
+
+repository
+
+↓
+
+database
+
+Use DTO pattern.
+
+Never expose Entity directly.
+
+Use Mapper classes.
+
+Use Global Exception Handling.
+
+Use Validation.
+
+Use ResponseEntity.
+
+Follow SOLID principles.
+
+Use Constructor Injection.
+
+Never use field injection.
+
+----------------------------------------------------
+
+Security
+
+Implement Spring Security.
+
+JWT Authentication.
+
+Role Based Authorization.
+
+Password Encryption using BCrypt.
+
+Protect APIs.
+
+Implement Refresh Token if possible.
+
+----------------------------------------------------
+
+Database
+
+Design normalized tables.
+
+Include:
+
+users
+
+roles
+
+departments
+
+staff
+
+students
+
+complaints
+
+complaint_history
+
+comments
+
+notifications
+
+attachments
+
+feedback
+
+Generate proper relationships using JPA.
+
+Use OneToMany
+
+ManyToOne
+
+OneToOne
+
+ManyToMany only if absolutely necessary.
+
+----------------------------------------------------
+
+Frontend
+
+React using Vite.
+
+Folder Structure
+
+src
+
+api
+
+components
+
+pages
+
+layouts
+
+hooks
+
+services
+
+contexts
+
+routes
+
+utils
+
+assets
+
+Create reusable components.
+
+Use protected routes.
+
+Store JWT securely.
+
+Use Axios interceptors.
+
+Responsive UI.
+
+Dashboard for every role.
+
+----------------------------------------------------
+
+Dashboards
+
+Student Dashboard
+
+- Total Complaints
+- Pending
+- Resolved
+- Escalated
+
+Staff Dashboard
+
+- Assigned
+- In Progress
+- Completed
+
+Department Head Dashboard
+
+- Department complaints
+- Staff workload
+- Pending complaints
+
+Admin Dashboard
+
+- Total complaints
+- Active complaints
+- Escalated complaints
+- Department-wise statistics
+- Charts
+
+----------------------------------------------------
+
+Additional Features
+
+Complaint Timeline
+
+Complaint History
+
+Notifications
+
+Search
+
+Pagination
+
+Sorting
+
+Filtering
+
+Image Upload
+
+Download Attachments
+
+Audit Logs
+
+Activity Tracking
+
+Soft Delete
+
+Email Notification (Optional)
+
+----------------------------------------------------
+
+Escalation System
+
+Create automatic escalation using Spring Scheduled.
+
+Check complaints every day.
+
+If complaint remains ASSIGNED or IN_PROGRESS beyond configured days
+
+↓
+
+Change status to ESCALATED
+
+↓
+
+Create history record
+
+↓
+
+Send notification
+
+↓
+
+Display in Admin Dashboard
+
+----------------------------------------------------
+
+Development Style
+
+DO NOT generate the whole project at once.
+
+Work module by module.
+
+At each step:
+
+1. Explain the requirement.
+2. Explain the architecture.
+3. Explain why we are creating each class.
+4. Generate only the required code.
+5. Explain every line.
+6. Wait for confirmation before moving to the next module.
+
+----------------------------------------------------
+
+Folder Structure
+
+Backend
+
+src/main/java
+
+config
+
+controller
+
+dto
+
+entity
+
+exception
+
+mapper
+
+repository
+
+security
+
+service
+
+util
+
+scheduler
+
+Frontend
+
+src
+
+components
+
+pages
+
+layouts
+
+hooks
+
+services
+
+routes
+
+contexts
+
+assets
+
+----------------------------------------------------
+
+Coding Standards
+
+Use meaningful variable names.
+
+Use JavaDoc.
+
+Follow naming conventions.
+
+Keep methods small.
+
+Avoid duplicate code.
+
+Follow REST API standards.
+
+Use proper HTTP status codes.
+
+----------------------------------------------------
+
+Learning Style
+
+Teach me as if I am preparing for a Java Full Stack interview.
+
+Do not skip concepts.
+
+Do not assume prior knowledge.
+
+Always explain why before writing code.
+
+Whenever a new technology appears (JWT, DTO, JPA, Spring Security, Scheduler, React Hooks, Axios), explain it first.
+
+I want to completely understand the project while building it.
+
+Start with Requirement Analysis and Project Planning only.
+
+Do not generate code until the design is finalized.

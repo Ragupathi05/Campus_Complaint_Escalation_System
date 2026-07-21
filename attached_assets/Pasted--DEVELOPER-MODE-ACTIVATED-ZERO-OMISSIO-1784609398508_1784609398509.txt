@@ -1,0 +1,169 @@
+===========================================================
+DEVELOPER MODE ACTIVATED — ZERO-OMISSION CODE IMPLEMENTATION
+===========================================================
+
+You are the Lead Software Engineer & Principal UI/UX Architect implementing the "Campus Complaint Escalation & Facility Management System".
+
+CRITICAL EXECUTION & CREDIT-SAVING RULES:
+1. CODE FIRST: Focus 98% of your output on complete, copy-pasteable source code.
+2. ZERO OMISSIONS / NO PLACEHOLDERS: Strictly NO `// TODO`, NO missing methods, NO pseudo-code, NO `/* styles here */`, and NO skipped imports. Every Java class and React component must be 100% complete and fully rendered.
+3. RELATIVE FILE PATHS: Always state the exact relative file path above every code block (e.g., `src/main/java/com/campuscomplaint/entity/Complaint.java` or `src/frontend/src/pages/StudentDashboard.jsx`).
+4. DO NOT ASK FOR PERMISSION: Do not ask "Should I proceed?", "Would you like me to continue?", or ask me to choose options.
+5. CONTINUOUS GENERATION: Generate complete files back-to-back in sequence until you hit your output limit.
+6. OUTPUT LIMIT RULE: When you hit the max response limit, end with EXACTLY this line:
+   "Continue with the next project files."
+   (In the next prompt, resume seamlessly from the next file without repeating code).
+
+===========================================================
+1. SYSTEM ARCHITECTURE & TECH STACK
+===========================================================
+• Backend: Java 21, Spring Boot 3.x, Spring Security (Stateless JWT), Spring Data JPA, Lombok, MapStruct, Jakarta Validation, Maven.
+• Frontend: React.js (Vite), React Router DOM v6, Axios, Tailwind CSS v3, Lucide-React Icons, Recharts (Analytics).
+• Database: MySQL 8.x
+• Base Package: com.campuscomplaint
+
+===========================================================
+2. REFINED ROLES & ORGANIZATIONAL HIERARCHY
+===========================================================
+Hierarchy: Student / Faculty -> Department Head -> Staff -> Admin -> Higher Officials (Principal/Dean)
+
+1. STUDENT / FACULTY (ROLE_STUDENT, ROLE_FACULTY):
+   - Submit complaints using a 4-level cascading location picker.
+   - Upload issue photos, track real-time visual step-timeline, comment, rate resolution (1-5 stars), reopen within 3 days.
+2. DEPARTMENT HEAD (ROLE_DEPT_HEAD):
+   - Operational lead for specific department (Electrical, IT, Cleaning, Plumbing, Maintenance).
+   - Triage incoming department queue, assign/reassign staff, review "After Repair" photos, approve or reject resolution.
+3. STAFF (ROLE_STAFF):
+   - View assigned tasks sorted by priority, update status (IN_PROGRESS, WAITING_PARTS), upload mandatory "Before & After" photos, mark RESOLVED.
+4. ADMIN (ROLE_ADMIN):
+   - System Administrator. Manages Users, Departments, Campus Location Hierarchy, Categories, SLA rules.
+   - NOTE: Admin NEVER assigns daily complaints to staff (delegated to Dept Head).
+5. HIGHER OFFICIALS (ROLE_HIGHER_OFFICIAL):
+   - Principal / Vice Principal / Dean. Executive read-only view of severe, SLA-escalated tickets with administrative note capability.
+
+===========================================================
+3. CAMPUS LOCATION HIERARCHY & CATEGORIES
+===========================================================
+• Structured Location Picker (No raw text):
+  Campus -> Academic Block/Zone -> Floor -> Room -> Specific Landmark
+  (e.g., Main Campus -> Block A -> 2nd Floor -> Room A-204 -> Near Window)
+
+• Categories & Auto-Priorities:
+  - Electrical (Critical/Emergency) | Water Leakage / Plumbing (High)
+  - Internet / Wi-Fi (High)        | Smart Classroom / Projector (Medium)
+  - Furniture / Benches (Low)      | Sanitation / Cleaning (High)
+  - Laboratory / Library / Hostel  | Security / Others
+
+• Status Lifecycle:
+  NEW -> ASSIGNED -> ACCEPTED -> IN_PROGRESS -> WAITING_PARTS -> RESOLVED -> VERIFIED -> CLOSED -> ESCALATED -> REOPENED -> REJECTED
+
+• SLA Escalation Engine:
+  Spring Boot @Scheduled background cron task runs periodically, checks SLA timeouts, and auto-escalates unresolved tickets to Admin and Higher Officials with an immutable audit log.
+
+===========================================================
+4. UI/UX DESIGN SYSTEM & DETAILED PAGE SPECIFICATIONS
+===========================================================
+
+DESIGN SYSTEM TO IMPLEMENT (Tailwind CSS):
+• Color Palette:
+  - Slate Dark (Sidebar & Headers): `#0F172A`, `#1E293B`
+  - Primary Indigo (Brand Accent): `#4F46E5`, `#6366F1`
+  - Success Emerald: `#10B981` | Warning Amber: `#F59E0B` | Danger Rose: `#F43F5E`
+• Components: Glassmorphic stat cards, rounded-xl shadows (`shadow-sm hover:shadow-md`), crisp status badges with dot indicators, custom switch toggles, drag-and-drop image dropzones.
+
+PAGES & COMPONENT DETAIL SPECIFICATION:
+
+1. AUTHENTICATION PAGES (/login, /register)
+   - Split-screen layout: Left side showcasing campus branding & features banner; Right side clean white login form.
+   - Inputs: Floating labels, clear password toggle (Eye/EyeOff icon), email validation.
+   - Buttons: Full-width Indigo "Sign In" button with loading spinner state (`lucide-react Loader2 animate-spin`).
+
+2. STUDENT DASHBOARD (/student/dashboard)
+   - Header Bar: Welcome text ("Hello, [Name]"), Notification Bell icon with unread badge count, Profile Avatar dropdown.
+   - Quick Stat Cards (Grid of 4):
+     * Total Complaints (Blue icon card)
+     * Active / In Progress (Amber icon card)
+     * Solved / Resolved (Emerald icon card)
+     * Escalated (Rose icon card)
+   - Action Bar: Primary Indigo button `"+ Raise New Complaint"` (opens modal or navigates to form).
+   - "My Complaints" Data Table / Card View:
+     * Columns: Ticket ID, Category Badge, Structured Location, Status Pill, Priority Indicator, Created Date, Action ("View Details" button).
+     * Filters: Search input box, Category filter dropdown, Status filter dropdown.
+
+3. CREATE COMPLAINT FORM (/student/raise-complaint)
+   - Multi-Step / Clean Form Layout:
+     * Step 1: Category selection (Visual cards with icons: Electrical, Wi-Fi, Cleaning, etc.).
+     * Step 2: Cascading Location Selectors (Dropdown 1: Block -> Dropdown 2: Floor -> Dropdown 3: Room -> Text Input: Specific Landmark).
+     * Step 3: Description textarea + Priority auto-tag preview badge.
+     * Step 4: Drag-and-Drop Image Uploader (Thumbnail previews with "Remove X" button).
+     * Footer Actions: "Cancel" outline button, "Submit Complaint" solid indigo button.
+
+4. COMPLAINT DETAILS & TIMELINE VIEW (/complaints/:id)
+   - Header: Complaint Title, Ticket ID `#CMP-1092`, Priority Badge (Critical/High/Medium/Low), SLA Timer Badge ("Time Remaining: 14 hrs").
+   - Main Content Split Layout (65% Left / 35% Right):
+     * Left Column:
+       - Full issue details & location hierarchy breadcrumb.
+       - Image gallery modal with thumbnail view.
+       - Work Proof Section: "Before Repair" vs "After Repair" side-by-side comparison cards.
+       - Comment & Activity Stream: Chat-style comment thread with timestamp and user role badges + text input with "Post Comment" button.
+     * Right Column:
+       - Interactive Vertical Visual Timeline:
+         [●] NEW (Date/Time) -> [●] ASSIGNED (Staff Name) -> [●] IN_PROGRESS -> [●] RESOLVED -> [●] VERIFIED -> [●] CLOSED.
+       - Action Buttons Panel:
+         * Student Actions: "Confirm & Rate Resolution" (5-Star rating modal + feedback textarea) OR "Reopen Complaint" button.
+
+5. DEPARTMENT HEAD DASHBOARD (/dept-head/dashboard)
+   - Metrics Bar: Unassigned Queue Count, In Progress, Resolved Today, SLA Breach Warning Count.
+   - Triage Queue Table:
+     * Columns: Ticket ID, Location, Issue Category, Priority, Elapsed Time, Assigned Staff Dropdown, Action Button ("Assign Staff").
+   - Staff Workload Modal / Sidebar: Displays staff names, active ticket count, and status toggle (Available/Busy).
+
+6. STAFF DASHBOARD (/staff/dashboard)
+   - Task Board / Kanban Columns (ASSIGNED | IN_PROGRESS | RESOLVED).
+   - Task Card Components:
+     * Ticket ID, Location, Emergency/Priority Badge, SLA Countdown Timer.
+     * Actions: "Accept Task" green button, "Update Progress / Add Note" button, "Submit Resolution" modal trigger (requires "After Repair" image upload).
+
+7. ADMIN DASHBOARD & MANAGEMENT PANELS (/admin/*)
+   - System Overview Charts (Recharts):
+     * Complaints by Category (Pie Chart).
+     * Department Performance & SLA Breach Rate (Bar Chart).
+     * Campus Hotspot Location Heatmap Table.
+   - User Management Panel: Table with Search, Filter by Role, "Add User" button, Account Active/Inactive toggle switch.
+   - Department & Location Configuration Panel: Add/Edit Blocks, Floors, Rooms, and Department Heads.
+   - SLA Escalation Manager Panel: Configure SLA timers per category (e.g., Electrical = 24h, Cleaning = 8h).
+
+===========================================================
+5. IMPLEMENTATION SPRINT ORDER
+===========================================================
+Sprint 1: Core Backend Infrastructure, Configs, Enums, & Security (Current)
+Sprint 2: Entities, Repositories, & Database Schema
+Sprint 3: Auth & User Management APIs (JWT Login, Register, Profile)
+Sprint 4: Department & Campus Location Management APIs
+Sprint 5: Core Complaint Lifecycle, Image Upload Handlers, & Action APIs
+Sprint 6: Automated SLA Escalation Cron Scheduler & Audit Trail Loggers
+Sprint 7: React Frontend Setup, Tailwind Theme, Router Guards, & Component Library
+Sprint 8: Student & Staff Dashboards, Forms, & Complaint Timeline UI
+Sprint 9: Department Head & Admin Analytics Dashboards + Export Reports
+
+===========================================================
+START IMPLEMENTATION NOW — SPRINT 1: CORE BACKEND & SECURITY
+===========================================================
+
+Begin generating complete, production-ready backend files in sequence immediately:
+
+1. `pom.xml` (Spring Boot 3.x, Security, JWT jjwt-api/impl/jackson, JPA, MySQL Driver, Lombok, MapStruct, Validation)
+2. `src/main/resources/application.yml` (MySQL connection, Hibernate DDL props, JWT secret/expiration, multipart file limits)
+3. Domain Enums:
+   - `src/main/java/com/campuscomplaint/enums/RoleType.java`
+   - `src/main/java/com/campuscomplaint/enums/ComplaintStatus.java`
+   - `src/main/java/com/campuscomplaint/enums/PriorityLevel.java`
+4. Base Wrappers & Infrastructure:
+   - `src/main/java/com/campuscomplaint/entity/BaseEntity.java` (MappedSuperclass with @CreatedDate, @LastModifiedDate, soft delete)
+   - `src/main/java/com/campuscomplaint/dto/response/ApiResponse.java` (Generic standard wrapper)
+5. Security & JWT:
+   - `src/main/java/com/campuscomplaint/security/jwt/JwtUtils.java`
+   - `src/main/java/com/campuscomplaint/security/jwt/AuthTokenFilter.java`
+   - `src/main/java/com/campuscomplaint/config/SecurityConfig.java` (SecurityFilterChain, BCrypt, CORS, RBAC rules)
+
+Begin writing `pom.xml` right now. Do not output an introduction or summary.
