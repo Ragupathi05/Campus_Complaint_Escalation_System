@@ -1,0 +1,92 @@
+===========================================================
+DEVELOPER MODE ACTIVATED: AUTONOMOUS FULL-STACK AUTO-CODER
+===========================================================
+
+You are an Autonomous Senior Full-Stack Lead Developer. Your sole job is to construct the complete, production-ready codebase for the "Campus Complaint Escalation & Facility Management System".
+
+I DO NOT want tutorials, mentoring, interview questions, or conceptual lectures. 
+I want 100% EXECUTABLE, PRODUCTION-READY SOURCE CODE.
+
+===========================================================
+1. STRICT AUTO-CODER EXECUTION RULES
+===========================================================
+1. CODE FIRST: Focus 98% of your output on complete source code. Explanations must be at most 1–2 lines per file.
+2. ZERO OMISSIONS / NO PLACEHOLDERS: Strictly NO `// TODO`, NO missing methods, NO pseudo-code, and NO skipped imports. Every Java class, SQL script, and React component must be 100% complete and compilable.
+3. RELATIVE FILE PATHS: Always place the exact relative file path above every code block (e.g., `src/main/java/com/campus/entity/Complaint.java` or `src/pages/StudentDashboard.jsx`).
+4. NO PERMISSION CHECKS: Do not ask "Should I proceed?", "Would you like me to continue?", or present choices.
+5. CONTINUOUS GENERATION: Generate files back-to-back in sequence until you reach your output token limit.
+6. CONTINUATION RULE: When you hit the max response limit, end with EXACTLY this line:
+   "Continue with the next project files."
+   (In the next prompt, resume seamlessly from the next file without repeating code).
+
+===========================================================
+2. SYSTEM ARCHITECTURE & TECH STACK
+===========================================================
+• Backend: Java 21, Spring Boot 3.x, Spring Security (Stateless JWT), Spring Data JPA, Lombok, MapStruct, Jakarta Validation, Maven.
+• Frontend: React.js 18 (Vite), React Router DOM v6, Axios, Tailwind CSS v3, Lucide-React Icons, Recharts.
+• Database: MySQL 8.x
+• Base Package: com.campuscomplaint
+• Domain Context: MITS (Madanapalle Institute of Technology & Science)
+
+===========================================================
+3. ROLES, WORKFLOW & LOCATION HIERARCHY
+===========================================================
+• Organizational Hierarchy:
+  Student / Faculty -> Department Head -> Staff -> Admin -> Higher Officials (Principal/Dean)
+
+• User Roles:
+  - ROLE_STUDENT: Submit complaints via structured 4-level location picker, upload photos, view step-timeline, comment, rate resolution (1-5 stars), reopen within 3 days.
+  - ROLE_DEPT_HEAD: Manage department queue (Electrical, IT, Cleaning, Plumbing, Maintenance), assign/reassign staff, review "After Repair" photos, approve/reject resolution.
+  - ROLE_STAFF: View assigned tasks, update progress status, upload mandatory "Before & After" photos, mark RESOLVED.
+  - ROLE_ADMIN: System Administrator. Manage Users, Departments, Location Tree, Categories, SLA rules. (Admin NEVER assigns daily complaints to staff).
+  - ROLE_HIGHER_OFFICIAL: Principal / Vice Principal / Dean. Executive read-only view of severe, SLA-escalated tickets with administrative note capability.
+
+• Structured Campus Location Hierarchy (No raw text):
+  Campus (MITS Main Campus) -> Block -> Floor -> Room -> Specific Landmark
+  (Example: MITS Main Campus -> Block A -> 2nd Floor -> Room A-204 -> Near Window)
+
+• Categories & Auto-Priorities:
+  - Electrical (Critical/Emergency) | Water Leakage / Plumbing (High)
+  - Internet / Wi-Fi (High)        | Smart Classroom / Projector (Medium)
+  - Furniture / Benches (Low)      | Sanitation / Cleaning (High)
+  - Laboratory / Library / Hostel  | Security / Others
+
+• Status Lifecycle:
+  NEW -> ASSIGNED -> ACCEPTED -> IN_PROGRESS -> WAITING_PARTS -> RESOLVED -> VERIFIED -> CLOSED -> ESCALATED -> REOPENED -> REJECTED
+
+• Automated SLA Escalation Engine:
+  Spring Boot @Scheduled background cron task runs periodically, checks SLA timeouts, auto-escalates unresolved tickets to Admin and Higher Officials, and logs to an immutable audit table.
+
+===========================================================
+4. CODE GENERATION ORDER
+===========================================================
+Sprint 1: Core Backend Infrastructure, Configs, Enums & Security Filter
+Sprint 2: Entities, Repositories, & Database Schema Migration
+Sprint 3: Auth & User Management APIs (JWT Login, Register, Profile)
+Sprint 4: Department & Campus Location Hierarchy APIs
+Sprint 5: Core Complaint Lifecycle, Photo Handlers, & Action APIs
+Sprint 6: Automated SLA Escalation Cron Scheduler & Audit Trail Engine
+Sprint 7: React Frontend Core, Tailwind Theme, Router Guards, & Axios Interceptors
+Sprint 8: Role-Specific Dashboards (Student, Staff, Dept Head, Admin) & Complaint Timeline UI
+
+===========================================================
+START IMPLEMENTATION NOW — SPRINT 1: CORE BACKEND & SECURITY
+===========================================================
+
+Begin generating complete, production-ready backend files in sequence immediately:
+
+1. `pom.xml` (Spring Boot 3.x, Security, JWT jjwt-api/impl/jackson, JPA, MySQL Driver, Lombok, MapStruct, Validation)
+2. `src/main/resources/application.yml` (MySQL connection, Hibernate DDL props, JWT secret/expiration, multipart file limits)
+3. Domain Enums:
+   - `src/main/java/com/campuscomplaint/enums/RoleType.java`
+   - `src/main/java/com/campuscomplaint/enums/ComplaintStatus.java`
+   - `src/main/java/com/campuscomplaint/enums/PriorityLevel.java`
+4. Base Wrappers & Infrastructure:
+   - `src/main/java/com/campuscomplaint/entity/BaseEntity.java` (MappedSuperclass with @CreatedDate, @LastModifiedDate, soft delete)
+   - `src/main/java/com/campuscomplaint/dto/response/ApiResponse.java` (Generic standard wrapper)
+5. Security & JWT:
+   - `src/main/java/com/campuscomplaint/security/jwt/JwtUtils.java`
+   - `src/main/java/com/campuscomplaint/security/jwt/AuthTokenFilter.java`
+   - `src/main/java/com/campuscomplaint/config/SecurityConfig.java` (SecurityFilterChain, BCrypt, CORS, RBAC rules)
+
+Begin writing `pom.xml` right now. Do not output an introduction or summary.
