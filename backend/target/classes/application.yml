@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: campus-complaint-system
+
+  datasource:
+    url: jdbc:h2:file:./data/campusdb;DB_CLOSE_DELAY=-1;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+app:
+  jwt:
+    secret: 9a2f8c4e7b1d3f6a8c5e2b0d9f4a7c1e3b5d8f6a9c2e4b7a1d3f5e8c0b2d4f6a
+    expiration-ms: 86400000 # 24 hours
+
+  upload:
+    dir: uploads
+
+  sla:
+    check-cron: "0 */15 * * * *" # Every 15 minutes
+    default-hours: 48
