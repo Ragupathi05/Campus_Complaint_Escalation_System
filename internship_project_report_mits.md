@@ -144,53 +144,54 @@ Campus infrastructure maintenance in academic institutions like Madanapalle Inst
 # TABLE OF CONTENTS
 
 | CHAPTER NO. | TITLE | PAGE NO. |
-| :--- | :--- | :--- |
+| :---: | :--- | :---: |
 | | **Bonafide Certificate** | ii |
 | | **Internship Certificate** | iii |
 | | **Declaration** | iv |
-| | **Abstract** | v |
-| | **List of Tables** | viii |
-| | **List of Figures** | ix |
-| | **List of Abbreviations** | x |
+| | **Acknowledgement** | v |
+| | **Abstract** | vi |
+| | **Table of Contents** | vii |
+| | **List of Tables** | ix |
+| | **List of Figures** | x |
+| | **List of Abbreviations** | xi |
 | **1.** | **INTRODUCTION** | **1** |
-| | 1.1 About Industry or Organization Details | 1 |
+| | 1.1 About Industry or Organization Details | 2 |
 | | 1.2 My Personal Benefits | 3 |
 | | 1.3 Objective of the Project | 4 |
 | | 1.4 Limitations of Project | 5 |
-| **2.** | **SYSTEM ANALYSIS** | **6** |
-| | 2.1 Introduction | 6 |
-| | 2.2 Existing System | 7 |
-| | 2.3 Disadvantages of Existing System | 8 |
+| **2.** | **SYSTEM ANALYSIS** | **7** |
+| | 2.1 Introduction | 8 |
+| | 2.2 Existing System | 8 |
+| | 2.3 Disadvantages of Existing System | 9 |
 | | 2.4 Proposed System | 9 |
 | | 2.5 Advantages over Existing System | 11 |
-| **3.** | **SYSTEM SPECIFICATION** | **13** |
+| **3.** | **SYSTEM SPECIFICATION** | **12** |
 | | 3.1 Hardware Requirement Specification | 13 |
-| | 3.2 Software Requirement Specification | 14 |
-| **4.** | **SYSTEM DESIGN** | **17** |
-| | 4.1 System Architecture | 17 |
-| | 4.2 Modules Flow Diagrams | 20 |
-| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.1 Data Flow Diagrams (DFD Level 0 & Level 1) | 20 |
-| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.2 Entity-Relationship (ER) Diagram | 23 |
-| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.3 UML Use Case Diagram | 25 |
-| **5.** | **IMPLEMENTATION AND RESULTS** | **27** |
-| | 5.1 Introduction | 27 |
-| | 5.2 Implementation of Key Functions | 28 |
-| | 5.3 Method of Implementation (CODING) | 30 |
-| | 5.4 Output Screens and Result Analysis | 37 |
-| | 5.5 Conclusion | 44 |
-| **6.** | **TESTING AND VALIDATION** | **45** |
-| | 6.1 Introduction | 45 |
-| | 6.2 Design of Test Cases and Scenarios | 46 |
-| | 6.3 Validation | 49 |
-| | 6.4 Conclusion | 50 |
-| **7.** | **CONCLUSION** | **51** |
-| | 7.1 Conclusion | 51 |
-| | 7.2 Future Scope | 52 |
-| | **REFERENCES** | **53** |
-| | **APPENDICES** | **55** |
-| | Appendix 1: Week Wise Working Process | 55 |
-| | Appendix 2: Picture Proofs During Internship Period | 58 |
-| | Appendix 3: Stipend Details | 59 |
+| | 3.2 Software Requirement Specification | 13 |
+| **4.** | **SYSTEM DESIGN** | **15** |
+| | 4.1 System Architecture | 16 |
+| | 4.2 Modules Flow Diagrams | 17 |
+| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.1 Data Flow Diagrams (DFD) | 17 |
+| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.2 Entity-Relationship (ER) Diagram | 19 |
+| | &nbsp;&nbsp;&nbsp;&nbsp;4.2.3 UML Use Case Diagram | 20 |
+| **5.** | **IMPLEMENTATION AND RESULTS** | **22** |
+| | 5.1 Introduction | 23 |
+| | 5.2 Implementation of Key Functions | 23 |
+| | 5.3 Method of Implementation (CODING) | 24 |
+| | 5.4 Output Screens and Result Analysis | 28 |
+| | 5.5 Conclusion | 33 |
+| **6.** | **TESTING AND VALIDATION** | **34** |
+| | 6.1 Introduction | 35 |
+| | 6.2 Design of Test Cases and Scenarios | 35 |
+| | 6.3 Validation | 36 |
+| | 6.4 Conclusion | 36 |
+| **7.** | **CONCLUSION** | **37** |
+| | 7.1 Conclusion | 38 |
+| | 7.2 Future Scope | 38 |
+| | **REFERENCES** | **39** |
+| | **APPENDICES** | **40** |
+| | Appendix A: Week-Wise Working Process | 40 |
+| | Appendix B: Picture Proofs During Internship Period | 42 |
 
 ---
 <div style="page-break-after: always;"></div>
@@ -198,15 +199,15 @@ Campus infrastructure maintenance in academic institutions like Madanapalle Inst
 # LIST OF TABLES
 
 | TABLE NO. | TITLE | PAGE NO. |
-| :--- | :--- | :--- |
-| Table 2.1 | Comparative Analysis: Existing Manual vs. Proposed CampusCare System | 12 |
+| :---: | :--- | :---: |
+| Table 2.1 | Comparative Analysis: Existing Manual vs. Proposed CampusCare System | 11 |
 | Table 3.1 | Hardware Requirement Specifications (Development & Server) | 13 |
 | Table 3.2 | Software Stack and Dependency Frameworks | 14 |
-| Table 4.1 | Role-Based Access Control (RBAC) Permission Matrix | 19 |
-| Table 4.2 | Database Schema Data Dictionary: Core Entities | 24 |
-| Table 5.1 | Standard Service Level Agreement (SLA) Resolution Benchmarks | 29 |
-| Table 6.1 | Comprehensive Test Case Suite & Execution Outcomes | 47 |
-| Table 6.2 | Verification and System Validation Metrics | 49 |
+| Table 4.1 | Role-Based Access Control (RBAC) Permission Matrix | 17 |
+| Table 4.2 | Database Schema Data Dictionary: Core Entities | 20 |
+| Table 5.1 | Standard Service Level Agreement (SLA) Resolution Benchmarks | 24 |
+| Table 6.1 | Comprehensive Test Case Suite & Execution Outcomes | 35 |
+| Table 6.2 | Verification and System Validation Metrics | 36 |
 
 ---
 <div style="page-break-after: always;"></div>
@@ -214,20 +215,21 @@ Campus infrastructure maintenance in academic institutions like Madanapalle Inst
 # LIST OF FIGURES
 
 | FIGURE NO. | TITLE | PAGE NO. |
-| :--- | :--- | :--- |
-| Figure 4.1 | 3-Tier Enterprise Client-Server System Architecture | 18 |
-| Figure 4.2 | Data Flow Diagram (DFD) Level 0: Context Level Diagram | 21 |
-| Figure 4.3 | Data Flow Diagram (DFD) Level 1: Core Functional Subsystems | 22 |
-| Figure 4.4 | Entity-Relationship (ER) Schema Diagram | 23 |
-| Figure 4.5 | UML Use Case Diagram: Role-Based Actor Interactions | 26 |
-| Figure 5.1 | CampusCare Secure Role-Based Authentication Gateway | 37 |
-| Figure 5.2 | Student Facility Overview Dashboard & Health Indicators | 38 |
-| Figure 5.3 | Campus Community Feed & Collaborative Upvote Hub | 39 |
-| Figure 5.4 | 5-Step Complaint Registration Wizard with Hierarchical Location Picker | 40 |
-| Figure 5.5 | Live 8-Stage Repair Journey & Before/After Proof Audit Lightbox | 41 |
-| Figure 5.6 | Service Supervisor Smart AI Dispatcher & Technician Allocation Engine | 42 |
-| Figure 5.7 | Technician Interactive Task Workstation & Execution Engine | 43 |
-| Figure 5.8 | Executive Campus Health Analytics & Department Compliance Leaderboard | 44 |
+| :---: | :--- | :---: |
+| Figure 2.1 | CampusCare End-to-End Operational Workflow Diagram | 10 |
+| Figure 4.1 | 3-Tier Enterprise Client-Server System Architecture | 16 |
+| Figure 4.2 | Data Flow Diagram (DFD) Level 0: Context Level Diagram | 18 |
+| Figure 4.3 | Data Flow Diagram (DFD) Level 1: Core Functional Subsystem | 18 |
+| Figure 4.4 | Entity-Relationship (ER) Schema Diagram | 19 |
+| Figure 4.5 | UML Use Case Diagram: Role-Based Actor Interactions | 21 |
+| Figure 5.1 | CampusCare Secure Role-Based Authentication Gateway | 28 |
+| Figure 5.2 | Student Facility Overview Dashboard & Health Indicators | 29 |
+| Figure 5.3 | Campus Community Feed & Collaborative Upvote Hub | 29 |
+| Figure 5.4 | 5-Step Complaint Registration Wizard with Hierarchical Location Picker | 30 |
+| Figure 5.5 | Live 8-Stage Repair Journey & Before/After Proof Audit Lightbox | 31 |
+| Figure 5.6 | Service Supervisor Smart AI Dispatcher & Technician Allocation Engine | 31 |
+| Figure 5.7 | Technician Interactive Task Workstation & Execution Engine | 32 |
+| Figure 5.8 | Executive Campus Health Analytics & Department Compliance Leaderboard | 33 |
 
 ---
 <div style="page-break-after: always;"></div>

@@ -16,6 +16,7 @@ import {
   CheckCircle2,
   AlertTriangle,
   PackageCheck,
+  Activity,
 } from 'lucide-react';
 
 export const ComplaintDetails = () => {
