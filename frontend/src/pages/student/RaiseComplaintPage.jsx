@@ -4,7 +4,7 @@ import { complaintApi } from '../../api/complaintApi';
 import { departmentApi } from '../../api/departmentApi';
 import { LocationPicker } from '../../components/LocationPicker';
 import { ImageUploadZone } from '../../components/ImageUploadZone';
-import { PlusCircle, FileText, ShieldAlert, CheckCircle, ArrowRight } from 'lucide-react';
+import { PlusCircle, FileText, ShieldAlert, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 
 export const RaiseComplaintPage = () => {
   const navigate = useNavigate();
