@@ -59,79 +59,86 @@ export const ComplaintHistoryPage = () => {
   });
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="w-full space-y-6">
+      {/* 3D Header Banner */}
+      <div className="bg-gradient-to-r from-slate-950 via-indigo-950 to-blue-950 p-6 sm:p-7 rounded-3xl text-white shadow-xl border border-indigo-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-bold text-slate-800">My Complaint History</h2>
-          <p className="text-xs text-slate-500">Track and filter all your submitted campus issues & resolution ratings</p>
+          <div className="flex items-center space-x-2 text-cyan-400 text-xs font-black uppercase tracking-wider mb-1">
+            <History className="w-4 h-4 text-cyan-400" />
+            <span>Complaint Records</span>
+          </div>
+          <h2 className="text-2xl font-black text-white tracking-tight">My Complaint History</h2>
+          <p className="text-xs text-indigo-100/90 font-medium">Track and filter all your submitted campus issues & resolution ratings</p>
         </div>
       </div>
 
       {/* Filter Bar */}
-      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-3 items-center justify-between">
-        <div className="relative w-full md:w-80">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+      <div className="card-3d bg-white p-5 rounded-3xl border border-slate-200/90 shadow-sm flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div className="relative w-full md:w-96">
+          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
           <input
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by ticket # or title..."
-            className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:ring-1 focus:ring-indigo-500"
+            className="w-full text-xs pl-10 pr-4 py-2.5 rounded-2xl border border-slate-200 bg-slate-50/80 focus:bg-white focus:ring-2 focus:ring-indigo-500/30 font-medium transition-all"
           />
         </div>
 
-        <div className="flex items-center space-x-2 overflow-x-auto w-full md:w-auto">
+        <div className="flex items-center space-x-2 overflow-x-auto w-full md:w-auto pb-1 md:pb-0">
           {['ALL', 'NEW', 'IN_PROGRESS', 'RESOLVED', 'CLOSED', 'ESCALATED'].map((status) => (
             <button
               key={status}
               onClick={() => setSelectedStatus(status)}
-              className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`px-3.5 py-2 rounded-xl text-xs font-black whitespace-nowrap transition-all shadow-2xs ${
                 selectedStatus === status
-                  ? 'bg-indigo-600 text-white shadow-md'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-indigo-600/30'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
-              {status}
+              {status.replace('_', ' ')}
             </button>
           ))}
         </div>
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+      <div className="card-3d bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
         <table className="w-full text-left text-xs text-slate-600">
-          <thead className="bg-slate-50 border-b border-slate-200 font-semibold text-slate-700">
+          <thead className="bg-slate-50/80 border-b border-slate-200 font-extrabold text-slate-700">
             <tr>
-              <th className="px-4 py-3">Ticket #</th>
-              <th className="px-4 py-3">Title & Category</th>
-              <th className="px-4 py-3">Location</th>
-              <th className="px-4 py-3">Status</th>
-              <th className="px-4 py-3">SLA Due Date</th>
-              <th className="px-4 py-3 text-right">Actions</th>
+              <th className="px-5 py-3.5">Ticket #</th>
+              <th className="px-5 py-3.5">Title & Category</th>
+              <th className="px-5 py-3.5">Location</th>
+              <th className="px-5 py-3.5">Status</th>
+              <th className="px-5 py-3.5">SLA Due Date</th>
+              <th className="px-5 py-3.5 text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100">
+          <tbody className="divide-y divide-slate-100 font-medium">
             {filtered.length === 0 ? (
               <tr>
-                <td colSpan="6" className="px-4 py-8 text-center text-slate-400 italic">
+                <td colSpan="6" className="px-5 py-12 text-center text-slate-400 italic">
                   No complaint tickets found matching your query.
                 </td>
               </tr>
             ) : (
               filtered.map((item) => (
-                <tr key={item.id} className="hover:bg-slate-50">
-                  <td className="px-4 py-3 font-mono font-bold text-indigo-600">{item.ticketNumber}</td>
-                  <td className="px-4 py-3">
-                    <p className="font-semibold text-slate-800">{item.title}</p>
-                    <p className="text-[11px] text-slate-400">{item.categoryName}</p>
+                <tr key={item.id} className="hover:bg-indigo-50/20 transition-colors">
+                  <td className="px-5 py-3.5 font-mono font-black text-indigo-600">
+                    <span className="bg-indigo-50 px-2.5 py-1 rounded-lg border border-indigo-100">{item.ticketNumber}</span>
                   </td>
-                  <td className="px-4 py-3 max-w-xs truncate">{item.locationFullPath}</td>
-                  <td className="px-4 py-3"><StatusBadge status={item.status} /></td>
-                  <td className="px-4 py-3 text-[11px] text-slate-500">{new Date(item.slaDueDate).toLocaleString()}</td>
-                  <td className="px-4 py-3 text-right space-x-2">
+                  <td className="px-5 py-3.5">
+                    <p className="font-black text-slate-900">{item.title}</p>
+                    <p className="text-[11px] text-slate-400 font-medium">{item.categoryName}</p>
+                  </td>
+                  <td className="px-5 py-3.5 max-w-xs truncate text-slate-700">{item.locationFullPath}</td>
+                  <td className="px-5 py-3.5"><StatusBadge status={item.status} /></td>
+                  <td className="px-5 py-3.5 text-[11px] text-slate-500 font-bold">{new Date(item.slaDueDate).toLocaleString()}</td>
+                  <td className="px-5 py-3.5 text-right space-x-2">
                     <Link
                       to={`/complaints/${item.id}`}
-                      className="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md text-[11px] font-medium hover:bg-slate-200"
+                      className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-xl text-xs font-bold hover:bg-slate-200 transition-colors shadow-2xs"
                     >
                       Details
                     </Link>
@@ -140,13 +147,13 @@ export const ComplaintHistoryPage = () => {
                       <>
                         <button
                           onClick={() => setVerifyModalTask(item)}
-                          className="px-2.5 py-1 bg-emerald-600 text-white rounded-md text-[11px] font-semibold hover:bg-emerald-500"
+                          className="px-3 py-1.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl text-xs font-bold shadow-md shadow-emerald-600/20 hover:from-emerald-500 hover:to-teal-500 transition-all"
                         >
                           Verify & Rate
                         </button>
                         <button
                           onClick={() => setReopenModalTask(item)}
-                          className="px-2.5 py-1 bg-rose-600 text-white rounded-md text-[11px] font-semibold hover:bg-rose-500"
+                          className="px-3 py-1.5 bg-gradient-to-r from-rose-600 to-red-600 text-white rounded-xl text-xs font-bold shadow-md shadow-rose-600/20 hover:from-rose-500 hover:to-red-500 transition-all"
                         >
                           Reopen
                         </button>

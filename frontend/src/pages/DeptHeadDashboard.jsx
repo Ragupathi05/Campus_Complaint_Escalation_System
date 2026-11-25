@@ -73,7 +73,7 @@ export const DeptHeadDashboard = () => {
         <div className="relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-3 max-w-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-amber-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-cyan-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Service Supervisor Portal</span>
               </span>
@@ -104,7 +104,7 @@ export const DeptHeadDashboard = () => {
       {/* Metrics Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Department Tickets" value={total} subtitle="Total tickets received" icon={Users} color="blue" />
-        <StatCard title="Unassigned Queue" value={unassigned} subtitle="Awaiting technician dispatch" icon={Clock} color="amber" />
+        <StatCard title="Unassigned Queue" value={unassigned} subtitle="Awaiting technician dispatch" icon={Clock} color="cyan" />
         <StatCard title="In Active Repair" value={activeWork} subtitle="Technicians in field" icon={UserCheck} color="indigo" />
         <StatCard title="SLA Escalations" value={escalated} subtitle="Critical SLA breaches" icon={AlertTriangle} color="rose" />
       </div>
@@ -127,9 +127,9 @@ export const DeptHeadDashboard = () => {
                   <p className="text-[10px] text-blue-600 font-semibold">Assigned</p>
                   <p className="font-bold text-blue-700 text-sm">{staff.assignedCount}</p>
                 </div>
-                <div className="bg-amber-50 p-2 rounded-xl border border-amber-100">
-                  <p className="text-[10px] text-amber-600 font-semibold">In Work</p>
-                  <p className="font-bold text-amber-700 text-sm">{staff.inProgressCount}</p>
+                <div className="bg-cyan-50 p-2 rounded-xl border border-cyan-100">
+                  <p className="text-[10px] text-cyan-700 font-semibold">In Work</p>
+                  <p className="font-bold text-cyan-800 text-sm">{staff.inProgressCount}</p>
                 </div>
                 <div className="bg-emerald-50 p-2 rounded-xl border border-emerald-100">
                   <p className="text-[10px] text-emerald-600 font-semibold">Resolved</p>

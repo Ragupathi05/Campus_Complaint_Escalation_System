@@ -40,7 +40,7 @@ export const StaffScheduleCalendar = () => {
                     item.status === 'COMPLETED'
                       ? 'bg-emerald-50 text-emerald-700'
                       : item.status === 'IN_PROGRESS'
-                      ? 'bg-amber-50 text-amber-700'
+                      ? 'bg-sky-50 text-sky-800 border border-sky-100'
                       : 'bg-slate-100 text-slate-600'
                   }`}
                 >

@@ -20,10 +20,10 @@ export const AdminDashboard = () => {
   const categoryChartData = Object.entries(stats.complaintsByCategory || {}).map(([key, val]) => ({ name: key, count: val }));
   const priorityChartData = Object.entries(stats.complaintsByPriority || {}).map(([key, val]) => ({ name: key, count: val }));
 
-  const COLORS = ['#2563eb', '#f59e0b', '#22c55e', '#ef4444', '#8b5cf6'];
+  const COLORS = ['#2563eb', '#06b6d4', '#10b981', '#ef4444', '#8b5cf6'];
 
   return (
-    <div className="space-y-6 pb-12">
+    <div className="w-full space-y-6 pb-12">
       {/* 3D Futuristic Hero Banner with Campus Image Backdrop */}
       <div className="relative rounded-3xl p-6 sm:p-8 text-white shadow-2xl overflow-hidden bg-slate-950 border border-indigo-500/20 group">
         {/* Futuristic 3D Campus Image Background */}
@@ -43,7 +43,7 @@ export const AdminDashboard = () => {
         <div className="relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-3 max-w-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-amber-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-cyan-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
                 <Activity className="w-3.5 h-3.5 text-blue-400" />
                 <span>System Administration</span>
               </span>
@@ -74,7 +74,7 @@ export const AdminDashboard = () => {
       {/* Global Stat Metrics */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         <StatCard title="Total Tickets" value={stats.totalComplaints} subtitle="Lifetime submissions" icon={Building2} color="blue" />
-        <StatCard title="In Progress" value={stats.inProgressComplaints} subtitle="Under repair care" icon={Clock} color="amber" />
+        <StatCard title="In Progress" value={stats.inProgressComplaints} subtitle="Under repair care" icon={Clock} color="cyan" />
         <StatCard title="Resolved" value={stats.resolvedComplaints} subtitle="Technician completed" icon={CheckCircle2} color="emerald" />
         <StatCard title="SLA Escalated" value={stats.escalatedComplaints} subtitle="Overdue SLA breaches" icon={AlertTriangle} color="rose" />
         <StatCard title="Closed Tickets" value={stats.closedComplaints} subtitle="Archived tickets" icon={ShieldAlert} color="indigo" />

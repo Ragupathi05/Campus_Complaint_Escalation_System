@@ -76,7 +76,7 @@ export const Login = () => {
         {/* Center Feature Value Props */}
         <div className="relative z-20 space-y-6 max-w-xl">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold shadow-lg">
-            <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+            <Sparkles className="w-4 h-4 text-cyan-300 animate-pulse" />
             <span>Smart Campus Complaint & Facility Infrastructure</span>
           </div>
 
@@ -94,7 +94,7 @@ export const Login = () => {
           {/* Floating Feature Badges */}
           <div className="grid grid-cols-3 gap-3 pt-2">
             <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-white space-y-1">
-              <div className="flex items-center space-x-1.5 text-xs font-black text-amber-300">
+              <div className="flex items-center space-x-1.5 text-xs font-black text-cyan-300">
                 <Zap className="w-4 h-4" />
                 <span>Instant SLA</span>
               </div>
@@ -232,11 +232,11 @@ export const Login = () => {
               <button
                 type="button"
                 onClick={() => handleQuickLogin('depthead1')}
-                className="p-2.5 rounded-2xl bg-amber-50/80 hover:bg-amber-600 hover:text-white border border-amber-100 text-amber-950 transition-all font-bold text-left flex items-center justify-between group shadow-2xs"
+                className="p-2.5 rounded-2xl bg-cyan-50/80 hover:bg-cyan-600 hover:text-white border border-cyan-100 text-cyan-950 transition-all font-bold text-left flex items-center justify-between group shadow-2xs"
               >
                 <div>
                   <span className="block text-[11px] font-extrabold">Supervisor</span>
-                  <span className="text-[9px] text-slate-500 group-hover:text-amber-100 font-medium">depthead1</span>
+                  <span className="text-[9px] text-slate-500 group-hover:text-cyan-100 font-medium">depthead1</span>
                 </div>
                 <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>

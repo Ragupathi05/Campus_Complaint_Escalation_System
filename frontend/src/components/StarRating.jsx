@@ -21,7 +21,7 @@ export const StarRating = ({ value = 0, onChange, readOnly = false }) => {
           <Star
             className={`w-5 h-5 ${
               (hover || value) >= star
-                ? 'text-amber-400 fill-amber-400'
+                ? 'text-cyan-500 fill-cyan-500 drop-shadow-xs'
                 : 'text-slate-300'
             }`}
           />

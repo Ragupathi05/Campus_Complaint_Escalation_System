@@ -96,10 +96,10 @@ export const StaffWorkstationPage = () => {
         </div>
 
         {/* Column 2: In Progress */}
-        <div className="bg-amber-50/50 p-4 rounded-2xl border border-amber-200 space-y-3">
-          <div className="flex items-center justify-between font-bold text-xs text-amber-700 pb-2 border-b border-amber-200">
+        <div className="bg-cyan-50/60 p-4 rounded-2xl border border-cyan-200 space-y-3">
+          <div className="flex items-center justify-between font-bold text-xs text-cyan-800 pb-2 border-b border-cyan-200">
             <span className="flex items-center space-x-1.5">
-              <Wrench className="w-4 h-4" />
+              <Wrench className="w-4 h-4 text-cyan-600" />
               <span>In Work ({inProgress.length})</span>
             </span>
           </div>
@@ -112,13 +112,13 @@ export const StaffWorkstationPage = () => {
                 <div className="pt-2 flex justify-end space-x-1">
                   <button
                     onClick={() => { setSelectedTask(item); setActionType('progress'); }}
-                    className="px-2 py-1 bg-amber-500 text-white rounded text-[10px] font-bold hover:bg-amber-400"
+                    className="px-2 py-1 bg-cyan-600 text-white rounded text-[10px] font-bold hover:bg-cyan-500 shadow-2xs"
                   >
                     Update
                   </button>
                   <button
                     onClick={() => { setSelectedTask(item); setActionType('resolve'); }}
-                    className="px-2 py-1 bg-emerald-600 text-white rounded text-[10px] font-bold hover:bg-emerald-500"
+                    className="px-2 py-1 bg-emerald-600 text-white rounded text-[10px] font-bold hover:bg-emerald-500 shadow-2xs"
                   >
                     Resolve
                   </button>
@@ -129,10 +129,10 @@ export const StaffWorkstationPage = () => {
         </div>
 
         {/* Column 3: Waiting Parts */}
-        <div className="bg-orange-50/50 p-4 rounded-2xl border border-orange-200 space-y-3">
-          <div className="flex items-center justify-between font-bold text-xs text-orange-700 pb-2 border-b border-orange-200">
+        <div className="bg-blue-50/60 p-4 rounded-2xl border border-blue-200 space-y-3">
+          <div className="flex items-center justify-between font-bold text-xs text-blue-800 pb-2 border-b border-blue-200">
             <span className="flex items-center space-x-1.5">
-              <Package className="w-4 h-4" />
+              <Package className="w-4 h-4 text-blue-600" />
               <span>Waiting Parts ({waitingParts.length})</span>
             </span>
           </div>

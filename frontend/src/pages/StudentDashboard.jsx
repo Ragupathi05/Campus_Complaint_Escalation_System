@@ -65,8 +65,8 @@ export const StudentDashboard = () => {
         <div className="relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-3 max-w-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-amber-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
-                <Sparkles className="w-3.5 h-3.5 animate-pulse text-amber-300" />
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-cyan-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
+                <Sparkles className="w-3.5 h-3.5 animate-pulse text-cyan-300" />
                 <span>Student Portal</span>
               </span>
               <span className="text-xs text-indigo-200 font-semibold">• Academic Branch {user?.departmentName || 'CSE'}</span>
@@ -104,7 +104,7 @@ export const StudentDashboard = () => {
       {/* Metrics Row - Multi-Color Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Total Reported" value={total} subtitle="Lifetime tickets raised" icon={Wrench} color="blue" />
-        <StatCard title="Active In Repair" value={pending} subtitle="Under technician care" icon={Clock} color="amber" />
+        <StatCard title="Active In Repair" value={pending} subtitle="Under technician care" icon={Clock} color="cyan" />
         <StatCard title="Resolved & Closed" value={resolved} subtitle="Verified by student" icon={CheckCircle2} color="emerald" />
         <StatCard title="SLA Escalated" value={escalated} subtitle="Overdue ticket escalation" icon={AlertTriangle} color="rose" />
       </div>

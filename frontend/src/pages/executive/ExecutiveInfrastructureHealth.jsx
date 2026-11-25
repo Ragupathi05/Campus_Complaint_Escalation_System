@@ -28,7 +28,7 @@ export const ExecutiveInfrastructureHealth = () => {
               <span
                 className={`text-[10px] font-bold px-2 py-0.5 rounded ${
                   b.status === 'WARNING'
-                    ? 'bg-amber-100 text-amber-800'
+                    ? 'bg-rose-50 text-rose-700 border border-rose-200'
                     : 'bg-emerald-100 text-emerald-800'
                 }`}
               >

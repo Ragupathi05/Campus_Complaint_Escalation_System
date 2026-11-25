@@ -45,11 +45,11 @@ import { ExecutiveInfrastructureHealth } from './pages/executive/ExecutiveInfras
 import { ComplaintDetails } from './pages/ComplaintDetails';
 
 const MainLayout = ({ children }) => (
-  <div className="min-h-screen bg-slate-50 flex flex-col">
+  <div className="min-h-screen bg-slate-100/70 flex flex-col w-full">
     <Navbar />
-    <div className="flex flex-1">
+    <div className="flex flex-1 w-full">
       <Sidebar />
-      <main className="flex-1 bg-slate-50">{children}</main>
+      <main className="flex-1 w-full p-6 lg:p-8 overflow-y-auto min-w-0">{children}</main>
     </div>
   </div>
 );

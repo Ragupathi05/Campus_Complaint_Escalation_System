@@ -67,7 +67,7 @@ export const Register = () => {
         {/* Center Showcase Content */}
         <div className="relative z-20 space-y-6 max-w-xl">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold shadow-lg">
-            <GraduationCap className="w-4 h-4 text-amber-300 animate-bounce" />
+            <GraduationCap className="w-4 h-4 text-cyan-300 animate-bounce" />
             <span>Academic Student & Faculty Onboarding</span>
           </div>
 
@@ -85,7 +85,7 @@ export const Register = () => {
           {/* Feature Badges */}
           <div className="grid grid-cols-3 gap-3 pt-2">
             <div className="p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/15 text-white space-y-1">
-              <div className="flex items-center space-x-1.5 text-xs font-black text-amber-300">
+              <div className="flex items-center space-x-1.5 text-xs font-black text-cyan-300">
                 <Sparkles className="w-4 h-4" />
                 <span>Instant Ticket</span>
               </div>

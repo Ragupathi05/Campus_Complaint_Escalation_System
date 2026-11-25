@@ -182,7 +182,7 @@ export const AdminUsersPage = () => {
                     <button
                       onClick={() => { setSelectedUser(u); setResetModalOpen(true); }}
                       title="Reset Password"
-                      className="p-2 bg-amber-50 text-amber-700 rounded-xl hover:bg-amber-100 border border-amber-200 transition-colors"
+                      className="p-2 bg-indigo-50 text-indigo-700 rounded-xl hover:bg-indigo-100 border border-indigo-200 transition-colors"
                     >
                       <Key className="w-3.5 h-3.5" />
                     </button>
@@ -334,7 +334,7 @@ export const AdminUsersPage = () => {
                 <button type="button" onClick={() => setResetModalOpen(false)} className="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs font-semibold">
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-xl text-xs font-bold shadow-md">
+                <button type="submit" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md">
                   Reset Password
                 </button>
               </div>

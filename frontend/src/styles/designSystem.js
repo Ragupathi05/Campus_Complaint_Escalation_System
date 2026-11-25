@@ -10,8 +10,8 @@ export const designTokens = {
       blueLight: '#EFF6FF',
       emerald: '#22C55E',   // Success, Resolved, Verification Badges
       emeraldLight: '#DCFCE7',
-      amber: '#F59E0B',     // Warning, SLA Caution, In Progress
-      amberLight: '#FEF3C7',
+      amber: '#06B6D4',     // Clean Cyan (cool SaaS tone)
+      amberLight: '#ECFEFF',
       rose: '#EF4444',      // Danger, Escalated, Critical Priority
       roseLight: '#FEE2E2',
       slateBg: '#F8FAFC',   // Main Application Background
@@ -21,21 +21,21 @@ export const designTokens = {
       border: '#E2E8F0',
     },
     priority: {
-      LOW: { label: 'Low', color: 'emerald', bg: 'bg-emerald-50 border-emerald-200 text-emerald-700', icon: '🟢' },
-      MEDIUM: { label: 'Medium', color: 'amber', bg: 'bg-amber-50 border-amber-200 text-amber-700', icon: '🟡' },
-      HIGH: { label: 'High', color: 'orange', bg: 'bg-orange-50 border-orange-200 text-orange-700', icon: '🟠' },
-      CRITICAL: { label: 'Critical', color: 'rose', bg: 'bg-rose-50 border-rose-200 text-rose-700', icon: '🔴' },
+      LOW: { label: 'Low', color: 'emerald', bg: 'bg-emerald-50 border-emerald-200 text-emerald-700 font-bold', icon: '🟢' },
+      MEDIUM: { label: 'Medium', color: 'sky', bg: 'bg-sky-50 border-sky-200 text-sky-800 font-bold', icon: '🔹' },
+      HIGH: { label: 'High', color: 'indigo', bg: 'bg-indigo-50 border-indigo-200 text-indigo-800 font-bold', icon: '🔷' },
+      CRITICAL: { label: 'Critical', color: 'rose', bg: 'bg-rose-50 border-rose-200 text-rose-700 font-bold', icon: '🔴' },
     },
     status: {
-      NEW: { label: 'Submitted', bg: 'bg-blue-50 border-blue-200 text-blue-700' },
-      ASSIGNED: { label: 'Assigned', bg: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
-      ACCEPTED: { label: 'Accepted', bg: 'bg-sky-50 border-sky-200 text-sky-700' },
-      IN_PROGRESS: { label: 'In Repair', bg: 'bg-amber-50 border-amber-200 text-amber-700' },
-      WAITING_PARTS: { label: 'Waiting Parts', bg: 'bg-orange-50 border-orange-200 text-orange-700' },
-      REPAIR_COMPLETED: { label: 'Pending Verification', bg: 'bg-purple-50 border-purple-200 text-purple-700' },
-      VERIFIED: { label: 'Verified & Closed', bg: 'bg-emerald-50 border-emerald-200 text-emerald-700' },
-      ESCALATED: { label: 'SLA Escalated', bg: 'bg-rose-50 border-rose-200 text-rose-700 font-bold' },
-      REOPENED: { label: 'Reopened', bg: 'bg-red-50 border-red-200 text-red-700' },
+      NEW: { label: 'Submitted', bg: 'bg-blue-50 border-blue-200 text-blue-700 font-bold' },
+      ASSIGNED: { label: 'Assigned', bg: 'bg-indigo-50 border-indigo-200 text-indigo-700 font-bold' },
+      ACCEPTED: { label: 'Accepted', bg: 'bg-sky-50 border-sky-200 text-sky-700 font-bold' },
+      IN_PROGRESS: { label: 'In Repair', bg: 'bg-cyan-50 border-cyan-200 text-cyan-800 font-bold' },
+      WAITING_PARTS: { label: 'Waiting Parts', bg: 'bg-blue-50 border-blue-200 text-blue-800 font-bold' },
+      REPAIR_COMPLETED: { label: 'Pending Verification', bg: 'bg-purple-50 border-purple-200 text-purple-700 font-bold' },
+      VERIFIED: { label: 'Verified & Closed', bg: 'bg-emerald-50 border-emerald-200 text-emerald-700 font-bold' },
+      ESCALATED: { label: 'SLA Escalated', bg: 'bg-rose-50 border-rose-200 text-rose-700 font-extrabold' },
+      REOPENED: { label: 'Reopened', bg: 'bg-red-50 border-red-200 text-red-700 font-bold' },
     }
   },
   typography: {

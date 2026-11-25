@@ -18,41 +18,45 @@ export const StudentFeedbackPage = () => {
     : '5.0';
 
   return (
-    <div className="p-6 space-y-6 max-w-4xl mx-auto">
-      <div className="flex items-center justify-between">
+    <div className="w-full space-y-6">
+      <div className="bg-gradient-to-r from-slate-950 via-teal-950 to-emerald-950 p-6 sm:p-7 rounded-3xl text-white shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-teal-500/20">
         <div>
-          <h2 className="text-xl font-bold text-slate-800">My Ratings & Feedback Hub</h2>
-          <p className="text-xs text-slate-500">History of your service reviews and ratings submitted for resolved maintenance tasks</p>
+          <div className="flex items-center space-x-2 text-teal-300 text-xs font-bold uppercase tracking-wider mb-1">
+            <Award className="w-4 h-4 text-teal-300" />
+            <span>Service Evaluation Hub</span>
+          </div>
+          <h2 className="text-2xl font-black text-white tracking-tight">My Ratings & Feedback Hub</h2>
+          <p className="text-xs text-teal-100/90 font-medium">History of your service reviews and ratings submitted for resolved maintenance tasks</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="card-3d bg-white p-6 rounded-3xl border border-slate-200/90 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-medium text-slate-500">Total Reviews Given</p>
-            <h3 className="text-2xl font-bold text-slate-800">{complaints.length}</h3>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">Total Reviews Given</p>
+            <h3 className="text-3xl font-black text-slate-900 mt-1">{complaints.length}</h3>
           </div>
-          <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl">
+          <div className="p-3.5 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl shadow-md shadow-indigo-600/25">
             <MessageSquare className="w-6 h-6" />
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div className="card-3d bg-white p-6 rounded-3xl border border-slate-200/90 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-medium text-slate-500">Average Rating Given</p>
-            <h3 className="text-2xl font-bold text-amber-500">{averageRating} / 5.0</h3>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">Average Rating Given</p>
+            <h3 className="text-3xl font-black text-blue-600 mt-1">{averageRating} / 5.0</h3>
           </div>
-          <div className="p-3 bg-amber-50 text-amber-500 rounded-xl">
-            <Star className="w-6 h-6 fill-amber-500" />
+          <div className="p-3.5 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-2xl shadow-md shadow-indigo-600/25">
+            <Star className="w-6 h-6 fill-white" />
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+        <div className="card-3d bg-white p-6 rounded-3xl border border-slate-200/90 shadow-sm flex items-center justify-between">
           <div>
-            <p className="text-xs font-medium text-slate-500">Service Status</p>
-            <h3 className="text-sm font-bold text-emerald-600">Active Evaluator</h3>
+            <p className="text-xs font-bold uppercase tracking-wider text-slate-500">Service Status</p>
+            <h3 className="text-xl font-black text-emerald-600 mt-1">Active Evaluator</h3>
           </div>
-          <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+          <div className="p-3.5 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-2xl shadow-md shadow-emerald-600/25">
             <Award className="w-6 h-6" />
           </div>
         </div>

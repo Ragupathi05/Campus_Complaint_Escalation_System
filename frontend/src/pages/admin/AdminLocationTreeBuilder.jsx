@@ -34,7 +34,7 @@ export const AdminLocationTreeBuilder = () => {
                 {campus.children?.map((block) => (
                   <div key={block.id} className="p-2.5 bg-white rounded-lg border border-slate-200 space-y-1">
                     <div className="flex items-center space-x-1.5 font-bold text-slate-700">
-                      <Folder className="w-3.5 h-3.5 text-amber-500" />
+                      <Folder className="w-3.5 h-3.5 text-indigo-500" />
                       <span>{block.name}</span>
                     </div>
 

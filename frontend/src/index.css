@@ -13,34 +13,95 @@
 }
 
 .glass-card-light {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* 3D Depth Card Utilities */
+.card-3d {
+  background: #ffffff;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.02),
+    0 6px 16px -2px rgba(15, 23, 42, 0.05),
+    0 12px 24px -4px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.03),
+    0 14px 28px -4px rgba(15, 23, 42, 0.09),
+    0 20px 32px -6px rgba(15, 23, 42, 0.05);
+}
+
+/* Tactile 3D Buttons */
+.btn-3d-primary {
+  box-shadow: 0 4px 0 theme('colors.indigo.800'), 0 6px 12px rgba(79, 70, 229, 0.35);
+  transition: all 0.15s ease-in-out;
+}
+.btn-3d-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 theme('colors.indigo.800'), 0 3px 6px rgba(79, 70, 229, 0.25);
+}
+
+.btn-3d-emerald {
+  box-shadow: 0 4px 0 theme('colors.emerald.800'), 0 6px 12px rgba(16, 185, 129, 0.35);
+  transition: all 0.15s ease-in-out;
+}
+.btn-3d-emerald:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 theme('colors.emerald.800'), 0 3px 6px rgba(16, 185, 129, 0.25);
+}
+
+/* Subtle Dot Grid Texture for Backgrounds */
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, #cbd5e1 0.75px, transparent 0.75px);
 }
 
 .card-gradient-blue {
-  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(219, 234, 254, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95) 0%, rgba(219, 234, 254, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(59, 130, 246, 0.12);
 }
 
 .card-gradient-indigo {
-  background: linear-gradient(135deg, rgba(238, 242, 255, 0.9) 0%, rgba(224, 231, 255, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(238, 242, 255, 0.95) 0%, rgba(224, 231, 255, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.12);
 }
 
 .card-gradient-purple {
-  background: linear-gradient(135deg, rgba(250, 245, 255, 0.9) 0%, rgba(243, 232, 255, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(250, 245, 255, 0.95) 0%, rgba(243, 232, 255, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(168, 85, 247, 0.12);
 }
 
 .card-gradient-emerald {
-  background: linear-gradient(135deg, rgba(236, 253, 245, 0.9) 0%, rgba(209, 250, 229, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(236, 253, 245, 0.95) 0%, rgba(209, 250, 229, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.12);
+}
+
+.card-gradient-cyan {
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.95) 0%, rgba(207, 250, 254, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(6, 182, 212, 0.12);
+}
+
+.card-gradient-sky {
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.95) 0%, rgba(224, 242, 254, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(14, 165, 233, 0.12);
 }
 
 .card-gradient-amber {
-  background: linear-gradient(135deg, rgba(254, 243, 199, 0.9) 0%, rgba(253, 230, 138, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(240, 249, 255, 0.95) 0%, rgba(207, 250, 254, 0.7) 100%);
+  box-shadow: 0 8px 20px -4px rgba(6, 182, 212, 0.12);
 }
 
 .card-gradient-rose {
-  background: linear-gradient(135deg, rgba(255, 241, 242, 0.9) 0%, rgba(254, 205, 211, 0.5) 100%);
+  background: linear-gradient(135deg, rgba(255, 241, 242, 0.95) 0%, rgba(254, 205, 211, 0.6) 100%);
+  box-shadow: 0 8px 20px -4px rgba(244, 63, 94, 0.12);
 }
 
 /* Custom Scrollbar */

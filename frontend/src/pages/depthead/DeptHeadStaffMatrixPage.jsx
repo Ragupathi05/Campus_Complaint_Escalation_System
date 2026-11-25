@@ -40,9 +40,9 @@ export const DeptHeadStaffMatrixPage = () => {
                 <p className="text-[10px] text-purple-600 font-medium">Assigned</p>
                 <p className="font-bold text-purple-700 text-base">{staff.assignedCount}</p>
               </div>
-              <div className="bg-amber-50 p-2.5 rounded-xl border border-amber-100">
-                <p className="text-[10px] text-amber-600 font-medium">In Work</p>
-                <p className="font-bold text-amber-700 text-base">{staff.inProgressCount}</p>
+              <div className="bg-cyan-50 p-2.5 rounded-xl border border-cyan-100">
+                <p className="text-[10px] text-cyan-700 font-medium">In Work</p>
+                <p className="font-bold text-cyan-800 text-base">{staff.inProgressCount}</p>
               </div>
               <div className="bg-emerald-50 p-2.5 rounded-xl border border-emerald-100">
                 <p className="text-[10px] text-emerald-600 font-medium">Resolved</p>

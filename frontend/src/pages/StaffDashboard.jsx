@@ -95,7 +95,7 @@ export const StaffDashboard = () => {
         <div className="relative z-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-3 max-w-xl">
             <div className="flex items-center space-x-2">
-              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-amber-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
+              <span className="text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-cyan-300 backdrop-blur-md border border-white/20 shadow-lg flex items-center space-x-1.5">
                 <Wrench className="w-3.5 h-3.5 text-blue-400" />
                 <span>Technician Workstation</span>
               </span>
@@ -112,8 +112,8 @@ export const StaffDashboard = () => {
           </div>
 
           <div className="flex items-center space-x-3.5 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl relative z-20">
-            <div className="p-3 bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-xl shadow-lg">
-              <Star className="w-6 h-6 fill-amber-300 text-amber-300" />
+            <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-xl shadow-lg">
+              <Star className="w-6 h-6 fill-white text-white" />
             </div>
             <div>
               <span className="text-sm font-black text-white block">4.9 / 5.0 Rating</span>
@@ -126,7 +126,7 @@ export const StaffDashboard = () => {
       {/* Metrics Row */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         <StatCard title="Assigned Queue" value={stats.total} subtitle="Lifetime assigned jobs" icon={Wrench} color="blue" />
-        <StatCard title="Pending Accept" value={stats.assigned} subtitle="Awaiting acceptance" icon={Clock} color="amber" />
+        <StatCard title="Pending Accept" value={stats.assigned} subtitle="Awaiting acceptance" icon={Clock} color="cyan" />
         <StatCard title="In Work Progress" value={stats.inProgress} subtitle="Currently fixing" icon={AlertTriangle} color="indigo" />
         <StatCard title="Completed Jobs" value={stats.resolved} subtitle="Uploaded repair proof" icon={CheckCircle2} color="emerald" />
       </div>
@@ -187,7 +187,7 @@ export const StaffDashboard = () => {
                                 setSelectedTask(item);
                                 setActionType('progress');
                               }}
-                              className="px-2 py-1 bg-amber-500 hover:bg-amber-600 text-white rounded-lg text-[10px] font-bold"
+                              className="px-2 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-[10px] font-bold"
                             >
                               Status
                             </button>
@@ -229,7 +229,7 @@ export const StaffDashboard = () => {
               </div>
 
               <div className="p-3 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3 text-xs">
-                <div className="p-2 rounded-lg bg-amber-100 text-amber-700 font-bold text-[10px]">11:00 AM</div>
+                <div className="p-2 rounded-lg bg-cyan-100 text-cyan-800 font-bold text-[10px]">11:00 AM</div>
                 <div>
                   <span className="font-bold text-slate-900 block">Block B — Science Lab</span>
                   <span className="text-[11px] text-slate-500">AC Cooling & Filter Service</span>

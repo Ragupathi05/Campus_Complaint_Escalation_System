@@ -16,18 +16,18 @@ export const Sidebar = () => {
 
   if (role === 'ROLE_STUDENT' || role === 'ROLE_FACULTY') {
     links.push({ to: '/dashboard/student', label: 'Overview Dashboard', icon: LayoutDashboard, badgeColor: 'text-indigo-600' });
-    links.push({ to: '/dashboard/student/feed', label: 'Campus Feed & Upvote', icon: Flame, badgeColor: 'text-orange-500' });
+    links.push({ to: '/dashboard/student/feed', label: 'Campus Feed & Upvote', icon: Flame, badgeColor: 'text-cyan-500' });
     links.push({ to: '/dashboard/student/raise', label: 'Raise New Complaint', icon: PlusCircle, badgeColor: 'text-emerald-600' });
     links.push({ to: '/dashboard/student/history', label: 'Complaint History', icon: History, badgeColor: 'text-purple-600' });
-    links.push({ to: '/dashboard/student/feedback', label: 'Ratings & Reviews', icon: Star, badgeColor: 'text-amber-500' });
+    links.push({ to: '/dashboard/student/feedback', label: 'Ratings & Reviews', icon: Star, badgeColor: 'text-indigo-500' });
     links.push({ to: '/dashboard/student/profile', label: 'My Profile', icon: User, badgeColor: 'text-blue-600' });
   } else if (role === 'ROLE_STAFF') {
     links.push({ to: '/dashboard/staff/workstation', label: 'Interactive Workstation', icon: Wrench, badgeColor: 'text-blue-600' });
     links.push({ to: '/dashboard/staff/inventory', label: 'Spare Parts Requisition', icon: Package, badgeColor: 'text-purple-600' });
     links.push({ to: '/dashboard/staff/schedule', label: 'Daily Shift Route', icon: Calendar, badgeColor: 'text-emerald-600' });
-    links.push({ to: '/dashboard/staff/performance', label: 'Performance Scorecard', icon: Award, badgeColor: 'text-amber-500' });
+    links.push({ to: '/dashboard/staff/performance', label: 'Performance Scorecard', icon: Award, badgeColor: 'text-cyan-500' });
   } else if (role === 'ROLE_DEPT_HEAD') {
-    links.push({ to: '/dashboard/dept-head/dispatcher', label: 'AI Smart Dispatcher', icon: Zap, badgeColor: 'text-amber-500' });
+    links.push({ to: '/dashboard/dept-head/dispatcher', label: 'AI Smart Dispatcher', icon: Zap, badgeColor: 'text-blue-500' });
     links.push({ to: '/dashboard/dept-head/triage', label: 'Complaint Triage Queue', icon: AlertTriangle, badgeColor: 'text-rose-600' });
     links.push({ to: '/dashboard/dept-head/staff', label: 'Staff Workload Matrix', icon: Users, badgeColor: 'text-blue-600' });
     links.push({ to: '/dashboard/dept-head/sla-editor', label: 'Category SLA Config', icon: Clock, badgeColor: 'text-indigo-600' });
@@ -38,10 +38,10 @@ export const Sidebar = () => {
     links.push({ to: '/dashboard/admin/locations', label: 'Location Tree Builder', icon: MapPin, badgeColor: 'text-emerald-600' });
     links.push({ to: '/dashboard/admin/departments', label: 'Departments & SLA', icon: Building, badgeColor: 'text-purple-600' });
     links.push({ to: '/dashboard/admin/users', label: 'User Directory', icon: Users, badgeColor: 'text-indigo-600' });
-    links.push({ to: '/dashboard/admin/audit', label: 'Security Audit Ledger', icon: FileText, badgeColor: 'text-amber-500' });
+    links.push({ to: '/dashboard/admin/audit', label: 'Security Audit Ledger', icon: FileText, badgeColor: 'text-purple-500' });
   } else if (role === 'ROLE_HIGHER_OFFICIAL') {
     links.push({ to: '/dashboard/higher-official/breaches', label: 'SLA Failure Audit', icon: AlertOctagon, badgeColor: 'text-rose-600' });
-    links.push({ to: '/dashboard/higher-official/leaderboard', label: 'Department Leaderboard', icon: Award, badgeColor: 'text-amber-500' });
+    links.push({ to: '/dashboard/higher-official/leaderboard', label: 'Department Leaderboard', icon: Award, badgeColor: 'text-blue-500' });
     links.push({ to: '/dashboard/higher-official/infrastructure', label: 'Facility Health Map', icon: Activity, badgeColor: 'text-emerald-600' });
   }
 

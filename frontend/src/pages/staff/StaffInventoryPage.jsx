@@ -62,11 +62,11 @@ export const StaffInventoryPage = () => {
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
           <div>
             <p className="text-xs text-slate-500 font-medium">Pending Store Dispatch</p>
-            <h3 className="text-2xl font-bold text-amber-600">
+            <h3 className="text-2xl font-bold text-cyan-700">
               {requests.filter((r) => r.status === 'PENDING').length}
             </h3>
           </div>
-          <div className="p-3 bg-amber-50 text-amber-600 rounded-xl">
+          <div className="p-3 bg-cyan-50 text-cyan-700 rounded-xl border border-cyan-100">
             <ShoppingCart className="w-6 h-6" />
           </div>
         </div>
@@ -92,10 +92,10 @@ export const StaffInventoryPage = () => {
                 <td className="px-4 py-3 text-indigo-600 font-bold">{r.ticketNumber || 'General Stock'}</td>
                 <td className="px-4 py-3 font-sans">
                   <span
-                    className={`text-[10px] font-bold px-2 py-0.5 rounded ${
+                    className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full ${
                       r.status === 'APPROVED'
                         ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
-                        : 'bg-amber-50 text-amber-700 border border-amber-100'
+                        : 'bg-sky-50 text-sky-800 border border-sky-200'
                     }`}
                   >
                     {r.status}

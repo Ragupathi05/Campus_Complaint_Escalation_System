@@ -21,7 +21,7 @@ export const ExecutiveDepartmentLeaderboard = () => {
           <div key={dept.rank} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-base ${
-                dept.rank === 1 ? 'bg-amber-100 text-amber-800 border border-amber-300' : 'bg-slate-100 text-slate-700'
+                dept.rank === 1 ? 'bg-indigo-100 text-indigo-800 border border-indigo-300 shadow-2xs' : 'bg-slate-100 text-slate-700'
               }`}>
                 #{dept.rank}
               </div>
@@ -39,8 +39,8 @@ export const ExecutiveDepartmentLeaderboard = () => {
 
               <div>
                 <span className="text-slate-400 block font-medium">Student Rating</span>
-                <span className="font-bold text-amber-500 text-sm flex items-center justify-end space-x-1">
-                  <Star className="w-3.5 h-3.5 fill-amber-500" />
+                <span className="font-bold text-cyan-600 text-sm flex items-center justify-end space-x-1">
+                  <Star className="w-3.5 h-3.5 fill-cyan-500" />
                   <span>{dept.rating}</span>
                 </span>
               </div>

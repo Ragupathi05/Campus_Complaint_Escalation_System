@@ -139,7 +139,7 @@ export const AdminDepartmentsPage = () => {
                   {dept.deptHeadName ? (
                     <span className="text-indigo-600 font-bold">{dept.deptHeadName}</span>
                   ) : (
-                    <span className="text-amber-600 italic">Unassigned (Empty)</span>
+                    <span className="text-sky-700 italic font-semibold">Unassigned (Empty)</span>
                   )}
                 </p>
                 <p className="text-xs text-slate-600">{dept.description || 'No description'}</p>
@@ -147,7 +147,7 @@ export const AdminDepartmentsPage = () => {
                 <div className="pt-2 border-t border-slate-200 flex items-center justify-end space-x-2 text-xs">
                   <button
                     onClick={() => { setSelectedDept(dept); setHeadModalOpen(true); }}
-                    className="px-3 py-1 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-lg font-bold flex items-center space-x-1"
+                    className="px-3 py-1 bg-indigo-50 hover:bg-indigo-100 text-indigo-800 rounded-lg font-bold flex items-center space-x-1 border border-indigo-200"
                   >
                     <UserCheck className="w-3.5 h-3.5" />
                     <span>Assign Supervisor</span>
@@ -285,7 +285,7 @@ export const AdminDepartmentsPage = () => {
                 <button type="button" onClick={() => setHeadModalOpen(false)} className="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs">
                   Cancel
                 </button>
-                <button type="submit" className="px-4 py-2 bg-amber-600 text-white rounded-xl text-xs font-bold">
+                <button type="submit" className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl text-xs font-bold shadow-md">
                   Assign Supervisor
                 </button>
               </div>

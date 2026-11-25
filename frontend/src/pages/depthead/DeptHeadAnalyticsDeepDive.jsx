@@ -23,7 +23,7 @@ export const DeptHeadAnalyticsDeepDive = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <h3 className="text-sm font-bold text-slate-800 flex items-center space-x-2">
-            <AlertTriangle className="w-4 h-4 text-amber-500" />
+            <AlertTriangle className="w-4 h-4 text-cyan-600" />
             <span>Recurring Breakdown Hotspots</span>
           </h3>
 
@@ -33,7 +33,7 @@ export const DeptHeadAnalyticsDeepDive = () => {
                 <p className="font-bold text-slate-800">Block A (EB Block) - 2nd Floor AC Units</p>
                 <p className="text-[11px] text-slate-400">3 breakdown tickets this month</p>
               </div>
-              <span className="text-[10px] font-bold bg-amber-100 text-amber-800 px-2 py-0.5 rounded">High Frequency</span>
+              <span className="text-[10px] font-bold bg-rose-50 text-rose-700 border border-rose-200 px-2 py-0.5 rounded">High Frequency</span>
             </div>
 
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 flex items-center justify-between">

@@ -120,7 +120,7 @@ export const RaiseComplaintPage = () => {
         </div>
 
         <div className="flex items-center space-x-2 bg-white/15 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-white/25 relative z-10">
-          <Sparkles className="w-4 h-4 text-amber-300 animate-pulse" />
+          <Sparkles className="w-4 h-4 text-cyan-300 animate-pulse" />
           <span className="text-xs font-black text-white">5-Step Smart Wizard</span>
         </div>
       </div>

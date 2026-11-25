@@ -19,12 +19,20 @@ export const StatCard = ({ title, value, subtitle, icon: Icon, trend, color = 'b
       valueText: 'text-emerald-950',
     },
     amber: {
-      cardBg: 'card-gradient-amber',
-      border: 'border-amber-200/80',
-      iconBg: 'bg-gradient-to-br from-amber-500 to-orange-600',
+      cardBg: 'card-gradient-cyan',
+      border: 'border-cyan-200/90',
+      iconBg: 'bg-gradient-to-br from-cyan-500 to-teal-600',
       iconText: 'text-white',
-      accentBar: 'bg-amber-600',
-      valueText: 'text-amber-950',
+      accentBar: 'bg-cyan-600',
+      valueText: 'text-cyan-950',
+    },
+    cyan: {
+      cardBg: 'card-gradient-cyan',
+      border: 'border-cyan-200/90',
+      iconBg: 'bg-gradient-to-br from-cyan-500 to-teal-600',
+      iconText: 'text-white',
+      accentBar: 'bg-cyan-600',
+      valueText: 'text-cyan-950',
     },
     rose: {
       cardBg: 'card-gradient-rose',
@@ -55,30 +63,33 @@ export const StatCard = ({ title, value, subtitle, icon: Icon, trend, color = 'b
   const style = colorMap[color] || colorMap.blue;
 
   return (
-    <div className={`${style.cardBg} ${style.border} border p-5 rounded-3xl shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between`}>
-      <div className="flex items-center justify-between">
-        <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-600">{title}</span>
+    <div className={`${style.cardBg} ${style.border} border p-5 rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.06)] hover:shadow-[0_12px_28px_-6px_rgba(0,0,0,0.12)] hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden group flex flex-col justify-between border-t-2 border-t-white/90`}>
+      {/* 3D Decorative Ambient Light Bubble */}
+      <div className="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-white/40 blur-xl pointer-events-none group-hover:scale-125 transition-transform duration-500" />
+
+      <div className="flex items-center justify-between relative z-10">
+        <span className="text-[11px] font-black uppercase tracking-wider text-slate-700/90">{title}</span>
         {Icon && (
-          <div className={`p-2.5 rounded-2xl ${style.iconBg} ${style.iconText} shadow-md ring-4 ring-white/80 transform group-hover:scale-110 transition-transform duration-300`}>
+          <div className={`p-2.5 rounded-2xl ${style.iconBg} ${style.iconText} shadow-lg shadow-indigo-950/10 ring-4 ring-white/90 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
             <Icon className="w-4 h-4" />
           </div>
         )}
       </div>
 
-      <div className="my-2 flex items-baseline space-x-2">
-        <span className={`text-3xl font-black tracking-tight ${style.valueText}`}>{value}</span>
+      <div className="my-2 flex items-baseline space-x-2 relative z-10">
+        <span className={`text-3xl font-black tracking-tight ${style.valueText} drop-shadow-xs`}>{value}</span>
         {trend && (
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${trend.startsWith('+') ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200 text-slate-700'}`}>
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${trend.startsWith('+') ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-200 text-slate-700'} shadow-2xs`}>
             {trend}
           </span>
         )}
       </div>
 
-      {subtitle && <p className="text-[11px] text-slate-600 font-semibold">{subtitle}</p>}
+      {subtitle && <p className="text-[11px] text-slate-600 font-semibold relative z-10">{subtitle}</p>}
 
-      {/* Bottom Mini Accent Indicator Line */}
-      <div className="mt-3 w-full bg-slate-200/60 h-1.5 rounded-full overflow-hidden">
-        <div className={`h-full ${style.accentBar} rounded-full transition-all duration-500`} style={{ width: value > 0 ? '75%' : '15%' }} />
+      {/* 3D Bottom Mini Accent Indicator Line */}
+      <div className="mt-3 w-full bg-slate-200/70 h-2 rounded-full overflow-hidden p-0.5 shadow-inner relative z-10">
+        <div className={`h-full ${style.accentBar} rounded-full transition-all duration-500 shadow-xs`} style={{ width: value > 0 ? '75%' : '15%' }} />
       </div>
     </div>
   );

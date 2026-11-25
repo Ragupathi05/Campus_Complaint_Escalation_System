@@ -10,8 +10,8 @@ export const Navbar = () => {
   const [isNotifyOpen, setIsNotifyOpen] = useState(false);
 
   return (
-    <header className="bg-white/95 backdrop-blur-md text-slate-800 sticky top-0 z-40 border-b border-slate-200/80 shadow-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <header className="bg-white/95 backdrop-blur-md text-slate-800 sticky top-0 z-40 border-b border-slate-200/90 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)]">
+      <div className="w-full px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand Logo & Name */}
         <div className="flex items-center space-x-3">
           <div className="p-2 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-2xl shadow-md shadow-indigo-600/25 ring-2 ring-indigo-100">

@@ -117,7 +117,7 @@ export const StaffActiveTasksPage = () => {
                       <>
                         <button
                           onClick={() => { setSelectedTask(item); setActionType('progress'); }}
-                          className="px-2.5 py-1 bg-amber-500 text-white rounded-md text-[11px] font-semibold hover:bg-amber-400"
+                          className="px-2.5 py-1 bg-cyan-600 text-white rounded-md text-[11px] font-semibold hover:bg-cyan-500 shadow-2xs"
                         >
                           Update Status
                         </button>
